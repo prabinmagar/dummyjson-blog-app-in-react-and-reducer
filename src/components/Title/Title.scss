@@ -1,0 +1,29 @@
+@import "../../App.scss";
+
+.section-title{
+    text-align: center;
+    position: relative;
+    h3{
+        font-size: 40px;
+        font-family: $font-family-rubik;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .horz-line{
+        width: 120px;
+        height: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    p{
+        margin-top: 32px;
+        max-width: 580px;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: $font-family-lora;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+}

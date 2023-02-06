@@ -1,0 +1,50 @@
+@import "../../App.scss";
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    background-color: $clr-mid-blue;
+    height: 100%;
+    z-index: 999;
+    padding: 36px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: translateX(100%);
+    transition: $transition;
+
+    .sidebar-close-btn{
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        transition: $transition;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+
+    .navbar-brand{
+        &-icon{
+            margin-right: 6px;
+        }
+    }
+
+    .sidebar-nav{
+        .nav-item{
+            border-bottom: 1px solid darken($clr-mid-purple, 20%);
+            padding: 10px 0;
+        }
+    }
+
+    .sidebar-blocks{
+        .sidebar-block{
+            margin-bottom: 20px;
+            h3{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.sidebar-open{
+    transform: translateX(0);
+}

@@ -1,0 +1,43 @@
+@import "../../App.scss";
+
+.navbar{
+    height: 80px;
+    .navbar-brand{
+        &-icon{
+            margin-right: 5px;
+        }
+    }
+
+    .navbar-row{
+        .navbar-nav{
+            .nav-item{
+                margin-left: 36px;
+            }
+
+            @media screen and (max-width: 768px){
+                display: none;
+            }
+        }
+
+        .vertical-line{
+            height: 30px;
+            width: 3px;
+            background-color: $clr-mid-purple;
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+
+        .sidebar-show-btn{
+            border-radius: 2px;
+            margin-left: 32px;
+            padding: 4px;
+            border: 1px solid $clr-white;
+            transition: $transition;
+
+            &:hover{
+                background-color: transparent;
+                color: $clr-white;
+            }
+        }
+    }
+}

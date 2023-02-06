@@ -1,0 +1,92 @@
+@import "../../App.scss";
+
+.blog-single{
+    row-gap: 36px;
+    .blog-single-l{
+        .blog-info{
+            flex-wrap: wrap;
+            &-item{
+                margin-right: 24px;
+                &-text{
+                    margin-left: 8px;
+                }
+            }
+        }
+        .blog-title{
+            margin: 10px 0 20px 0;
+        }
+        
+        .blog-tags{
+            &-title{
+                white-space: nowrap;
+            }
+            &-list{
+                margin-left: 16px;
+                flex-wrap: wrap;
+            }
+            &-item{
+                background-color: $clr-ex-blue;
+                margin-right: 10px;
+                margin-bottom: 6px;
+                padding: 4px 9px;
+                border-radius: 4px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            }
+        }
+
+        .blog-author{
+            background-color: #F5F5F5;
+            padding: 28px 24px;
+            border-radius: 4px;
+            border: 1px solid rgba(130, 0, 221, 0.15);
+
+            @media screen and (min-width: 480px){
+                display: flex;
+                align-items: center;
+            }
+            .blog-author-l{
+                max-width: 120px;
+                max-height: 120px;
+                margin-right: 24px;
+            }
+            .blog-author-r{
+                font-family: $font-family-rubik;
+            }
+        }
+
+        .blog-comments{
+            .blog-comments-list{
+                row-gap: 12px;
+            }
+        }
+    }
+
+    .blog-single-r{
+        .recent-blogs-list{
+            border: 1px solid rgba(130, 0, 221, 0.15);
+            border-radius: 6px;
+
+            .recent-blogs-item{
+                padding: 16px;
+                row-gap: 12px;
+                border-bottom: 1px solid rgba(130, 0, 221, 0.15);
+
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px){
+        grid-template-columns: 65% 35%;
+
+        .blog-single-l{
+            padding-right: 32px;
+
+            @media screen and (min-width: 1200px){
+                padding-right: 64px;
+            }
+        }
+    }
+}

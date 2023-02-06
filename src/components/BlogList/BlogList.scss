@@ -1,0 +1,84 @@
+@import "../../App.scss";
+
+.blog-items{
+    row-gap: 32px;
+    .blog-item{
+        background-color: $clr-white;
+        box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 10px 0px;
+        border-radius: 6px;
+        padding: 36px 32px 32px 32px;
+        transition: $transition;
+
+        &-title{
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        &-reaction{
+            margin-top: 12px;
+
+            .reaction-value{
+                margin-left: 6px;
+            }
+        }
+
+        &-tags{
+            margin-top: 12px;
+            &-single{
+                background-color: $clr-ex-blue;
+                color: $clr-white;
+                margin: 4px;
+                padding: 3px 12px;
+                border-radius: 5px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: $transition;
+            }
+        }
+
+        &-btn{
+            .read-more-btn{
+                display: inline-block;
+                margin-top: 18px;
+                padding: 4px 12px;
+                border: 1px solid $clr-ex-blue;
+                border-radius: 4px;
+                &:hover{
+                    transform: scale(0.95);
+                    transition: $transition;
+                    border-color: $clr-white;
+                }
+            }
+        }
+
+        &:hover{
+            background-color: $clr-ex-blue;
+            color: $clr-white;
+            box-shadow: rgba(130, 0, 221, 0.15) 0px 7px 10px 0px;
+
+            .blog-item-btn{
+                .read-more-btn{
+                    border-color: $clr-white;
+                }
+            }
+
+            .blog-item-tags{
+                &-single{
+                    background-color: $clr-white!important;
+                    color: $clr-purple;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px){
+        column-gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 992px){
+        column-gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

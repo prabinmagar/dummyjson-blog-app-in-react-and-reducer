@@ -1,0 +1,17 @@
+@import "../../App.scss";
+
+.paginate-items{
+    .paginate-item{
+        width: 38px;
+        height: 38px;
+        margin: 0 4px;
+        border: 1px solid $clr-ex-blue;
+        border-radius: 2px;
+        transition: $transition;
+
+        &:hover{
+            background-color: $clr-white;
+            color: $clr-ex-blue;
+        }
+    }
+}

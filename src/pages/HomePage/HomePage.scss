@@ -1,0 +1,51 @@
+@import "../../App.scss";
+
+.header-content{
+    min-height: 60vh;
+    .header-title{
+        font-size: 36px;
+        max-width: 600px;
+
+        @media screen and (max-width: 768px){
+            font-size: 28px;
+        }
+    }
+    .header-input-group{
+        margin-top: 32px;
+        position: relative;
+        .form-text{
+            position: absolute;
+            left: 1.6rem;
+            top: calc(100% + 6px);
+            color: $clr-danger;
+        }
+        .form-control{
+            padding: 18px;
+            border-radius: 6px 0 0 6px;
+            width: 400px;
+            &::placeholder{
+                font-family: $font-family-rubik;
+                font-weight: 300;
+                opacity: 0.8;
+            }
+
+            @media screen and (max-width: 768px){
+                width: 300px;
+                font-size: 18px;
+                padding: 14px 16px;
+            }
+        }
+        .form-btn{
+            width: 60px;
+            border-radius: 0 6px 6px 0;
+            transition: $transition;
+            img{
+                width: 24px;
+            }
+
+            &:hover{
+                background-color: darken($clr-purple, 3%);
+            }
+        }
+    }
+}
